@@ -14,13 +14,20 @@
 
 <body>
 
+{% block header %}
 {% include 'common/header.html.twig' %}
+{% endblock %}
 
 {% block body %}{% endblock %}
 
 <script src="{{ asset('build/js/jquery.min.js') }}"></script>
 <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
 {% block javascripts %}{% endblock %}
+
+{% block footer %}
+    {% block textFooter %}{% endblock %}
+{% include 'common/footer.html.twig' %}
+{% endblock %}
 
 </body>
 </html>
