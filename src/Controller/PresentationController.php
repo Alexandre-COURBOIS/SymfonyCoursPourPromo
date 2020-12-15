@@ -51,20 +51,12 @@ class PresentationController extends AbstractController
         $age = 25;
         $ville = "Rouen";
 
-        $nom1 = "Toto";
-        $age1 = 21;
-        $ville1 = "Hello";
 
         $users = [
             $array = [
                 "nom" => $nom,
                 "age" => $age,
                 "city" => $ville
-            ],
-            $array = [
-                "nom" => $nom1,
-                "age" => $age1,
-                "city" => $ville1
             ],
         ];
 
