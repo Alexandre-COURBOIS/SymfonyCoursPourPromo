@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="http://placehold.it/150x150" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ nom }}</h5>
+                        <p class="card-text">AGE {{  age }}</p>
+                        <a href="#" class="btn btn-primary">From {{ city }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="http://placehold.it/150x150" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ nom }}</h5>
+                    <p class="card-text">AGE {{  age }}</p>
+                    <a href="#" class="btn btn-primary">From {{ city }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

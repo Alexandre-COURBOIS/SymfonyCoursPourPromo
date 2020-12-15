@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <h1>Bonjour ton prénom est : {{ text }} ,
+        et
+        {% if age %}
+            tu as {{ age }} ans ! :)
+        {% elseif age == 0 %}
+            tu n'as pas renseigné ton âge !
+        {% endif %}
+    </h1>
+
+{% endblock %}

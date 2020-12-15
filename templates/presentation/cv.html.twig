@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CV{% endblock %}
+
+{% block body %}
+
+    <h1>{{ name }}</h1>
+
+    {% for user in users %}
+        <ul>
+            <li>{{ user.nom }}</li>
+            <li>{{ user.age }}</li>
+            <li>{{ user.city }}</li>
+        </ul>
+    {% endfor %}
+
+    {# Boucle with three for #}
+
+    {% for competence in competences %}
+        {% for key, comp in competence %}
+            <h1>{{ key }}</h1>
+            <ul>
+                {% for first, value in comp %}
+                    {% if loop.first %}
+                        <li>{{ first | upper }} : {{ value }} / 100</li>
+                    {% elseif loop.last %}
+                        <li>{{ first | lower }} : {{ value }} / 100</li>
+                    {% else %}
+                        <li>{{ first }} : {{ value }} / 100</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endfor %}
+
+    {# Boucle with pipe #}
+
+    {% for key,competence in competences %}
+
+        <h1>{{ competence | keys | first }}</h1>
+
+        <ul>
+            {% for key, value in competence | first %}
+                <li>{{ key }} : {{ value }} / 100</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+{% endblock %}
