@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63753c6b-7de5-4063-8c3d-38e50d98169f" name="Default Changelist" comment="" />
+    <list default="true" id="63753c6b-7de5-4063-8c3d-38e50d98169f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ConversionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ConversionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Converter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Converter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/header.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +20,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -155,6 +166,7 @@
       <workItem from="1607944957848" duration="2610000" />
       <workItem from="1607951923404" duration="8429000" />
       <workItem from="1608019923501" duration="15247000" />
+      <workItem from="1608040594733" duration="2835000" />
     </task>
     <servers />
   </component>
@@ -162,10 +174,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607954536911">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608042967954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607954536911" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608042967954" />
     <state x="721" y="243" key="NewPhpClassDialog" timestamp="1608040163654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

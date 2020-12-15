@@ -11,7 +11,7 @@ class ConversionController extends AbstractController
 {
 
     /**
-     * @Route("/conversion/celcius/{value}", name="conversions")
+     * @Route("/conversion/celcius/{value}", name="conversions_celcius")
      * @param int $value
      * @param Converter $converter
      * @return Response
@@ -22,13 +22,13 @@ class ConversionController extends AbstractController
         return $this->render('conversion/conversion.html.twig', [
             "base" => $value,
             "result" => $converter->celciustoFar($value),
-            "ValueStr" => "Farhenheight",
+            "ValueStr" => "Fahrenheit",
             "ValueGoalStr" => "Celcius"
             ]);
     }
 
     /**
-     * @Route("/conversion/metre/{value}", name="conversions1")
+     * @Route("/conversion/metre/{value}", name="conversions_metre")
      * @param int $value
      * @param Converter $converter
      * @return Response
@@ -45,7 +45,7 @@ class ConversionController extends AbstractController
     }
 
     /**
-     * @Route("/conversion/kilo/{value}", name="conversions2")
+     * @Route("/conversion/kilo/{value}", name="conversions_kilo")
      * @param int $value
      * @param Converter $converter
      * @return Response

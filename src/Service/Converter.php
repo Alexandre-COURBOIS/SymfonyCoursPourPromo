@@ -8,8 +8,8 @@ class Converter
 {
 
     public function celciustoFar(float $value) : ? float {
-        $farenheight = $value - 32;
-        $result = $farenheight / 1.8;
+        $fahrenheit = $value - 32;
+        $result = $fahrenheit / 1.8;
 
         return $result;
     }
