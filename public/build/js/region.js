@@ -1,0 +1,1 @@
+console.log("Bienvenue sur la région de votre choix !")
