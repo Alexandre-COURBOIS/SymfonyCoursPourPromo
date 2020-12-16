@@ -4,9 +4,11 @@ namespace App\Entity;
 
 use App\Repository\DepartementRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Cocur\Slugify\Slugify;
 
 /**
  * @ORM\Entity(repositoryClass=DepartementRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Departement
 {
@@ -36,6 +38,24 @@ class Departement
      * @ORM\Column(type="float", nullable=true)
      */
     private $superficie;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function prePersist()
+    {
+        $slugify = new Slugify();
+
+        $slug = $slugify->slugify($this->getNom().$this->getCp());
+
+        $this->setSlug($slug);
+    }
+
 
     public function getId(): ?int
     {
@@ -86,6 +106,18 @@ class Departement
     public function setSuperficie(?float $superficie): self
     {
         $this->superficie = $superficie;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
