@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="63753c6b-7de5-4063-8c3d-38e50d98169f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/region/region.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/region/region.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +173,7 @@
       <workItem from="1608019923501" duration="15247000" />
       <workItem from="1608040594733" duration="6299000" />
       <workItem from="1608049900532" duration="606000" />
-      <workItem from="1608107322153" duration="6361000" />
+      <workItem from="1608107322153" duration="6525000" />
     </task>
     <servers />
   </component>

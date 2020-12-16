@@ -15,20 +15,20 @@
 <body>
 
 {% block header %}
-{% include 'common/header.html.twig' %}
+    {% include 'common/header.html.twig' %}
 {% endblock %}
 
 {% block body %}{% endblock %}
 
 <script src="{{ asset('build/js/jquery.min.js') }}"></script>
 <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('build/js/app.js') }}"></script>
 {% block javascripts %}
+    <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}
 
 {% block footer %}
     {% block textFooter %}{% endblock %}
-{% include 'common/footer.html.twig' %}
+    {% include 'common/footer.html.twig' %}
 {% endblock %}
 
 </body>

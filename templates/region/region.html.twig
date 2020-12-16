@@ -12,6 +12,8 @@
     <a href="https://www.google.com/search?q={{ region }}" target="_blank">Trouvez moi sur google !</a>
 
     {% block javascripts %}
+{#        Using parent method permit to use all the declarations in a block and it's not erasing it when we use it on other page than the first #}
+        {{ parent() }}
         <script src="{{ asset('build/js/region.js') }}"></script>
     {% endblock %}
 
