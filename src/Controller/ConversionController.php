@@ -9,19 +9,24 @@ use App\Service\Converter;
 
 class ConversionController extends AbstractController
 {
+    private $converter;
+
+    public function __construct(Converter $converter) {
+
+        $converter = $this->converter;
+    }
 
     /**
      * @Route("/conversion/celcius/{value}", name="conversions_celcius")
      * @param int $value
-     * @param Converter $converter
      * @return Response
      */
-    public function celcius(int $value = 0,Converter $converter): Response
+    public function celcius(int $value = 0): Response
     {
 
         return $this->render('conversion/conversion.html.twig', [
             "base" => $value,
-            "result" => $converter->celciustoFar($value),
+            "result" => $this->converter->celciustoFar($value),
             "ValueStr" => "Fahrenheit",
             "ValueGoalStr" => "Celcius"
             ]);
@@ -30,15 +35,14 @@ class ConversionController extends AbstractController
     /**
      * @Route("/conversion/metre/{value}", name="conversions_metre")
      * @param int $value
-     * @param Converter $converter
      * @return Response
      */
-    public function meter(int $value = 0,Converter $converter ): Response
+    public function meter(int $value = 0): Response
     {
 
         return $this->render('conversion/conversion.html.twig', [
             "base" => $value,
-            "result" => $converter->meterToStep($value),
+            "result" => $this->converter->meterToStep($value),
             "ValueStr" => "metres",
             "ValueGoalStr" => "pieds"
         ]);
@@ -47,15 +51,14 @@ class ConversionController extends AbstractController
     /**
      * @Route("/conversion/kilo/{value}", name="conversions_kilo")
      * @param int $value
-     * @param Converter $converter
      * @return Response
      */
-    public function kilo(int $value = 0,Converter $converter): Response
+    public function kilo(int $value = 0): Response
     {
 
         return $this->render('conversion/conversion.html.twig', [
             "base" => $value,
-            "result" => $converter->kiloTolivre($value),
+            "result" => $this->converter->kiloTolivre($value),
             "ValueStr" => "kilos",
             "ValueGoalStr" => "livres"
         ]);
