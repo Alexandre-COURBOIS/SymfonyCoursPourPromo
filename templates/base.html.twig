@@ -20,16 +20,17 @@
 
 {% block body %}{% endblock %}
 
+
+{% block footer %}
+    {% include 'common/footer.html.twig' %}
+{% endblock %}
+
 <script src="{{ asset('build/js/jquery.min.js') }}"></script>
 <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
 {% block javascripts %}
     <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}
 
-{% block footer %}
-    {% block textFooter %}{% endblock %}
-    {% include 'common/footer.html.twig' %}
-{% endblock %}
-
 </body>
+
 </html>

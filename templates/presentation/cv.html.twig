@@ -2,6 +2,17 @@
 
 {% block title %}CV{% endblock %}
 
+    {% block header %}
+        {% embed 'common/header.html.twig' %}
+            {% block logoHeader %}
+                <a class="navbar-brand containerLogo" href="{{ path('presentation') }}"><img class="loolol"
+                                                                                             src="{{ asset('build/img/kisspng-linux-distribution-logo-ubuntu-unix-cliparts-5aacefab8a6412.7957358015212829875669.jpg') }}"
+                                                                                             WIDTH="100" HEIGHT="100"
+                                                                                             alt="loolol"></a>
+            {% endblock logoHeader %}
+        {% endembed %}
+    {% endblock header %}
+
 {% block body %}
 
     <h1>{{ name }}</h1>
