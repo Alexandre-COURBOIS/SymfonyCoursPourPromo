@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{region}}{% endblock %}
+
+{% block body %}
+
+    <h1>Bienvenue sur la région : {{ region }}.</h1>
+
+    <a href="https://www.google.com/search?q={{ region }}" target="_blank">Trouvez moi sur google !</a>
+
+{% endblock %}

@@ -7,11 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * Class RegionController
- * @package App\Controller
- * @Route("/region", name="region_")
- */
 class RegionController extends AbstractController
 {
     /**
@@ -25,6 +20,19 @@ class RegionController extends AbstractController
 
         return $this->render('region/regions.html.twig', [
             'regions' => $regions
+        ]);
+    }
+
+    /**
+     * @Route("/region/{region}", name="one_region", requirements={"region"="[a-zA-Z]+"})
+     * @param String $region
+     * @return Response
+     */
+    public function oneRegion(String $region = "normandie"): Response
+    {
+
+        return $this->render('region/region.html.twig', [
+            'region' => $region
         ]);
     }
 }
