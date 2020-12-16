@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{region}}{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/css/region.css') }}">
+{% endblock %}
+{% block title %}{{ region }}{% endblock %}
 
 {% block body %}
 
