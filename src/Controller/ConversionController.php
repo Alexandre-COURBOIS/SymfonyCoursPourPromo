@@ -13,7 +13,8 @@ class ConversionController extends AbstractController
 
     public function __construct(Converter $converter) {
 
-        $converter = $this->converter;
+        $this->converter = $converter;
+
     }
 
     /**
