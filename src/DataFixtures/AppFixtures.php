@@ -13,10 +13,10 @@ class AppFixtures extends Fixture
 
         for ($i = 0; $i < 10; $i++) {
             $dpt = new Departement();
-            $dpt->setNom("toto".$i);
-            $dpt->setCp(76000);
-            $dpt->setPopulation("6542".$i);
-            $dpt->setSuperficie("51564546".$i);
+                $dpt->setNom("departement".$i);
+            $dpt->setCp("76000");
+            $dpt->setPopulation(rand(100000,500000));
+            $dpt->setSuperficie(rand(0,125000));
             $manager->persist($dpt);
         }
 
