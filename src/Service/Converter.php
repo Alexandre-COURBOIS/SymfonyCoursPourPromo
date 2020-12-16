@@ -9,7 +9,7 @@ class Converter
 
     /**
      * @param float $value
-     * @return float|null
+     * @return float
      */
     public function celciustoFar(float $value) : float {
         $fahrenheit = $value - 32;
@@ -20,7 +20,7 @@ class Converter
 
     /**
      * @param float $value
-     * @return float|null
+     * @return float
      */
     public function meterToStep(float $value) : float {
 
@@ -31,7 +31,7 @@ class Converter
 
     /**
      * @param float $value
-     * @return float|null
+     * @return float
      */
     public function kiloTolivre(float $value) : float {
 
