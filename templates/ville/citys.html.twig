@@ -14,6 +14,7 @@
         <li>Record de basse température à {{ city.nom }} : {{ city.recordTempFroid }}</li>
         <li>La température moyenne à {{ city.nom }} est de {{ city.temperatureMoyenne }}</li>
         <li>Département : {{ city.departement.nom }}, code postal : {{ city.departement.cp }}</li>
+        <li>Maire de {{ city.nom }} : {{ city.maire.nom | upper }} {{ city.maire.prenom | upper }}</li>
     </ul>
     {% endfor %}
 

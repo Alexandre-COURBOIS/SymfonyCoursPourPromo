@@ -55,6 +55,11 @@ class Ville
     private $departement;
 
     /**
+     * @ORM\OneToOne(targetEntity=Maire::class, mappedBy="ville", cascade={"persist", "remove"})
+     */
+    private $maire;
+
+    /**
      * @ORM\PrePersist()
      */
     public function prePersist()
@@ -147,6 +152,23 @@ class Ville
     public function setDepartement(?departement $departement): self
     {
         $this->departement = $departement;
+
+        return $this;
+    }
+
+    public function getMaire(): ?Maire
+    {
+        return $this->maire;
+    }
+
+    public function setMaire(Maire $maire): self
+    {
+        // set the owning side of the relation if necessary
+        if ($maire->getVille() !== $this) {
+            $maire->setVille($this);
+        }
+
+        $this->maire = $maire;
 
         return $this;
     }
