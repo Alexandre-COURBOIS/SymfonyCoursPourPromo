@@ -19,6 +19,16 @@ class VilleRepository extends ServiceEntityRepository
         parent::__construct($registry, Ville::class);
     }
 
+    public function findByTemp($temp){
+        return $this->createQueryBuilder('v')
+            ->select('v.id','v.nom','v.codeCommune','v.gentile','v.recordTempChaleur','v.recordTempFroid','v.temperatureMoyenne')
+            ->andWhere('v.recordTempChaleur >= :val')
+            ->setParameter('val',$temp)
+            ->orderBy('v.recordTempChaleur', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Ville[] Returns an array of Ville objects
     //  */
