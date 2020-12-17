@@ -10,11 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class VilleController extends AbstractController
 {
     /**
-     * @Route("/ville/codeCommune/{codeCommune}", name="ville_codeCommune")
+     * @Route("/ville/codeCommune/{codeCommune}", name="ville_codeCommune", requirements={"codeCommune"="\d+"})
      * @param Ville $ville
      * @return Response
      */
-    public function index(Ville $ville): Response
+    public function searchCommuneByCodeCommune(Ville $ville): Response
     {
 
         return $this->render('ville/codeCommune.twig', [
