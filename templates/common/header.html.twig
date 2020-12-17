@@ -26,8 +26,17 @@
                 <a class="nav-link" href="{{ path('one_region', {'region': "normandie"}) }}">Ma région</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('ville_codeCommune', {'codeCommune': "1"}) }}">Ma ville</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Villes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{ path('ville') }}">Les villes</a>
+                    <a class="dropdown-item" href="{{ path('ville_temp_max', {'temp': "20"}) }}">Villes températures</a>
+                    <a class="dropdown-item" href="{{ path('ville_codeCommune', {'codeCommune': "1"}) }}">Ma ville</a>
+                </div>
             </li>
+
             <li class="nav-item">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
