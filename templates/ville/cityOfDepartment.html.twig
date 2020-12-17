@@ -6,11 +6,14 @@
 
 
         <h1>Les villes du département {{ dpt.nom }} sont : </h1>
-
+    <hr>
     {% for city in citys %}
         <ul>
-            <li>{{ city.nom }}</li>
+            <li>Nom : {{ city.nom }}</li>
+            <li>Maire : {{ city.maire.nom }} {{ city.maire.prenom }}</li>
+            <li>Département : {{ city.departement.nom }}</li>
         </ul>
+        <hr>
     {% endfor %}
 
 
