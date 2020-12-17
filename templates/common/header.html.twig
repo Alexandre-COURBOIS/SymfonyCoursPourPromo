@@ -31,6 +31,7 @@
                     Villes
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{ path('ville_new') }}">Ajouter une ville</a>
                     <a class="dropdown-item" href="{{ path('ville') }}">Les villes</a>
                     <a class="dropdown-item" href="{{ path('ville_temp_max', {'temp': "20"}) }}">Villes températures</a>
                     <a class="dropdown-item" href="{{ path('ville_codeCommune', {'codeCommune': "1"}) }}">Ma ville</a>
