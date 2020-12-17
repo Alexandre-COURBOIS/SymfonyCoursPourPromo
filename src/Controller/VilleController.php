@@ -10,6 +10,22 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class VilleController extends AbstractController
 {
+
+
+    /**
+     * @Route("/villes", name="ville")
+     * @return Response
+     */
+    public function getCitys(VilleRepository $villeRepository) : Response
+    {
+
+        $citys = $villeRepository->findAll();
+
+        return $this->render('ville/citys.html.twig', [
+            'citys' => $citys
+        ]);
+    }
+
     /**
      * @Route("/ville/codeCommune/{codeCommune}", name="ville_codeCommune", requirements={"codeCommune"="\d+"})
      * @param Ville $ville
