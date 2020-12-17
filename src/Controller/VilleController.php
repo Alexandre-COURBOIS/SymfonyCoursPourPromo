@@ -16,7 +16,7 @@ class VilleController extends AbstractController
      * @Route("/villes", name="ville")
      * @return Response
      */
-    public function getCitys(VilleRepository $villeRepository) : Response
+    public function getCitys(VilleRepository $villeRepository): Response
     {
 
         $citys = $villeRepository->findAll();
@@ -48,12 +48,10 @@ class VilleController extends AbstractController
     public function searchCommuneByTempMax(VilleRepository $villeRepository, $temp): Response
     {
 
-        $ville = $villeRepository->findByTemp($temp);
-
-        dump($ville);
-
+        $ville = $villeRepository->findByTempMax($temp);
         return $this->render('ville/tempCity.html.twig', [
             'citys' => $ville
         ]);
     }
 }
+
