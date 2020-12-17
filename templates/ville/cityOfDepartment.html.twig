@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ville {% endblock %}
+
+{% block body %}
+
+
+        <h1>Les villes du département {{ dpt.nom }} sont : </h1>
+
+    {% for city in citys %}
+        <ul>
+            <li>{{ city.nom }}</li>
+        </ul>
+    {% endfor %}
+
+
+{% endblock %}

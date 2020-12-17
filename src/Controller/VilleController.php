@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Ville;
+use App\Repository\DepartementRepository;
 use App\Repository\VilleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -53,5 +54,25 @@ class VilleController extends AbstractController
             'citys' => $ville
         ]);
     }
+
+    /**
+     * @Route("/villes/departement/{departement}", name="ville_dpt")
+     * @return Response
+     */
+    public function getCityByDpt(VilleRepository $villeRepository, DepartementRepository $departementRepository, $departement): Response
+    {
+
+        $dpt = $departementRepository->findOneBy(['nom' => $departement]);
+
+        $citys = $villeRepository->findBy(['departement' => $dpt]);
+
+        return $this->render('ville/cityOfDepartment.html.twig', [
+            'citys' => $citys,
+            'dpt' => $dpt
+        ]);
+    }
+
+
+
 }
 
