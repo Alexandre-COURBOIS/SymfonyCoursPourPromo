@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ville {% endblock %}
+
+{% block body %}
+
+    <h1>Présentation de {{ city.nom }}</h1>
+
+    <ul>
+        <li>Code de la commune {{ city.codeCommune }}</li>
+        <li>Nom des habitants de cette ville {{ city.gentile }}</li>
+        <li>Record de haute température à {{ city.nom }} : {{ city.recordTempChaleur }}</li>
+        <li>Record de basse température à {{ city.nom }} : {{ city.recordTempFroid }}</li>
+        <li>La température moyenne à {{ city.nom }} est de {{ city.temperatureMoyenne }}</li>
+    </ul>
+
+{% endblock %}

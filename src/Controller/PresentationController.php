@@ -18,7 +18,7 @@ class PresentationController extends AbstractController
         $age = 25;
         $ville = "Rouen";
 
-        return $this->render('presentation/index.html.twig', [
+        return $this->render('presentation/codeCommune.twig', [
             'controller_name' => 'COUCOU',
             'nom' => $nom,
             'age' => $age,
