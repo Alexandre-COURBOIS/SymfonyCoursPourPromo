@@ -13,6 +13,7 @@
         <li>Record de haute température à {{ city.nom }} : {{ city.recordTempChaleur }}</li>
         <li>Record de basse température à {{ city.nom }} : {{ city.recordTempFroid }}</li>
         <li>La température moyenne à {{ city.nom }} est de {{ city.temperatureMoyenne }}</li>
+        <li>Département : {{ city.departement.nom }}, code postal : {{ city.departement.cp }}</li>
     </ul>
     {% endfor %}
 

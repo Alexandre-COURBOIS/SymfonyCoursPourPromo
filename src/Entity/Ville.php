@@ -49,6 +49,12 @@ class Ville
     private $temperatureMoyenne;
 
     /**
+     * @ORM\ManyToOne(targetEntity=Departement::class, inversedBy="villes")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $departement;
+
+    /**
      * @ORM\PrePersist()
      */
     public function prePersist()
@@ -129,6 +135,18 @@ class Ville
     public function setTemperatureMoyenne(float $temperatureMoyenne): self
     {
         $this->temperatureMoyenne = $temperatureMoyenne;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?departement
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(?departement $departement): self
+    {
+        $this->departement = $departement;
 
         return $this;
     }

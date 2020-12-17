@@ -28,6 +28,8 @@ class AppFixtures extends Fixture
             $city->setGentile("gensVille" . $j);
             $city->setRecordTempChaleur(rand(20,55));
             $city->setRecordTempFroid($j +2 * - 5);
+            $city->setDepartement($dpt);
+
             $manager->persist($city);
         }
 
